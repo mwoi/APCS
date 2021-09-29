@@ -1,0 +1,6 @@
+Marcus Wu
+APCS
+HW06 -- Paradigms
+2021-09-29
+
+The different programming languages use different commands to print a message; Python and NetLogo use print, while Scheme uses display. All three coding languages need "Hello, world!" in quotes, for the languages to interpret them as strings and print them.
