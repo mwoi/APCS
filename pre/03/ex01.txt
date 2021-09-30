@@ -1,0 +1,14 @@
+1) 
+No, I wug
+.You wugga wug
+.I wug
+.
+
+2) 
+main()
+zoop()
+baffle()
+ping()
+
+3) 
+After the first ping called by baffle in zoop, there will be an endless loop of pings followed by baffles followed by pings, since they will endlessly call each other.
