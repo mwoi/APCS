@@ -1,0 +1,38 @@
+Marcus Wu
+APCS
+HW03 -- Codify the Revisions
+2021-09-24
+
+0. The base of a number system is equal to the number of different digits used in a number system. For example, in base 10 there are 10 different digits: 0,1,2,3,4,5,6,7,8, and 9.
+
+1. Binary is another name for base 2. This is convenient for computers because circuits are made of small electrical switches called transistors. Switches can only be in two states, open or closed, and most circuits can be in only one of two states, on or off. Base 2, which only has two digits, is thus very useful for computers.
+
+2. Binary to Decimal:
+Step 1: Set the running total to zero, and the current number to the binary number we wish to convert.
+Step 2: Add the first digit of the current number to the running total.
+Step 3: Remove the first digit of the current number. If there's no more digits left in the current number, output the running total and exit. Otherwise, double the running total.
+Step 4: Go to step 2.
+Example:
+0 101
+0+1=1 101
+1 01
+2*1=2 01
+2+0=2 01
+2 1
+2*2=4 1
+4+1=5 1
+5
+
+3. Decimal to Binary:
+Step 1: Set the current number to the number we want to convert, and leave the current digits blank.
+Step 2: Put the current number mod 2 in front of the current digits.
+Step 3: Divide the current number by 2, rounding down. If the current number is zero, output the current digits and exit. Otherwise, go to step 2.
+Example:
+5 
+5 1
+2 1
+2 01
+1 01
+1 101
+0 101
+101
