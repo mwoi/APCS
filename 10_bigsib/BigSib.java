@@ -1,4 +1,4 @@
-/* Marcus Wu
+/* Team Elmo's Minions (Joshua Yagupsky + Quacker, Rin Fukuoka + Tape, Marcus Wu + nat)
    APCS
    HW10 -- Refactor Big Sib One
    2021-10-05
