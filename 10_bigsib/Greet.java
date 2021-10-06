@@ -1,6 +1,6 @@
 /* Marcus Wu
    APCS
-   HW08 -- Refactor Big Sib One
+   HW10 -- Refactor Big Sib One
    2021-10-05
 
    DISCOVERIES
