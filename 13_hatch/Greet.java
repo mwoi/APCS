@@ -4,9 +4,9 @@
    2021-10-07
 
    DISCO
-   	
+   	using new to create a variable makes it run through the constructor as a parameter. if the constructor is asking for a string in the parameter, the new must also have a string in the parentheses after the class name
    QCC
-   	
+   	why go through a constructor instead of declaring variables 
 */
 
 
@@ -16,7 +16,6 @@ public class Greet {
 
     BigSib richard = new BigSib("Word up");
     //richard.setHelloMsg("Word up");
-
     greeting = richard.greet("freshman");
     System.out.println(greeting);
 
