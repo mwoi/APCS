@@ -11,8 +11,7 @@
 	- putting the class name in the parameter of a method works: equals( Coin other ), and can be used to compare objects.
 	- Math.random() can be used for probability and generating random integers or floating-point numbers.
  QCC:
-	- The skeleton says the value of instance variable bias should be 1.0 for always heads and 0.0 for always tails, but
-		Math.random() creates a floating-point number in interval [0.0,1.0), so there cannot be a value 1.0. 
+	- The skeleton says the value of instance variable bias should be 1.0 for always heads and 0.0 for always tails, but Math.random() creates a floating-point number in interval [0.0,1.0), so there cannot be a value 1.0. 
  */
 
 public class Coin {
