@@ -160,4 +160,3 @@ public class Coin {
   }
   
 }//end class
-}//end class
