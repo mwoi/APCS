@@ -175,18 +175,22 @@ public class Pig
 
 	
 	public static void main(String[] args){
+		System.out.println("\nisPunc=============true false false");
 		System.out.println(isPunc(".")); //should be true
 		System.out.println(isPunc("b")); //should be false
 		System.out.println(isPunc("...")); //should be false, error
 		
+		System.out.println("\nisUpperCase=============true false false");
 		System.out.println(isUpperCase("B")); //should be true
 		System.out.println(isUpperCase("b")); //should be false
 		System.out.println(isUpperCase("jdiasdjDJASID")); //should be false, error
 		
+		System.out.println("\nhasPunc=============true true false");
 		System.out.println(hasPunc("...")); //should be true
 		System.out.println(hasPunc("what a good day!")); //should be true
 		System.out.println(hasPunc("today sux")); //should be false
 		
+		System.out.println("\nbeginsWithUpper=============false true false");
 		System.out.println(beginsWithUpper("wOWA THAT IS")); //should be false
 		System.out.println(beginsWithUpper("Wow that is great")); //should be true
 		System.out.println(beginsWithUpper("")); //should be false, error
