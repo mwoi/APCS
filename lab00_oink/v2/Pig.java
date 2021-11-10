@@ -12,7 +12,7 @@ public class Pig
 	hasA("cat", "p")       -> false
 	=====================================*/
 	public static boolean hasA( String w, String letter ) {
-    /* YOUR IMPLEMENTATION HERE */
+	/* YOUR IMPLEMENTATION HERE */
 		if( letter.length() != 1 ) {
 			System.out.println("Letter must have length 1.");
 			return false;
@@ -35,7 +35,7 @@ public class Pig
 	precondition: letter.length() == 1
 	=====================================*/
 	public static boolean isAVowel( String letter ) {
-    /* YOUR IMPLEMENTATION HERE */
+	/* YOUR IMPLEMENTATION HERE */
 		if ( letter.length() != 1 ) {
 			System.out.println("Letter must have length 1.");
 			return false;
@@ -112,7 +112,7 @@ public class Pig
 	post: isPunc(".") -> true
 		  isPunc("b") -> false
 	=====================================*/
-    public static boolean isPunc( String symbol ) {
+	public static boolean isPunc( String symbol ) {
 		if ( symbol.length() != 1 ){
 			System.out.println("isPunc expects 1 character, returning false");
 			return false;
@@ -127,7 +127,7 @@ public class Pig
 	post: isUpperCase("a") -> false
 		  isUpperCase("A") -> true
 	=====================================*/
-    public static boolean isUpperCase( String letter ) {
+	public static boolean isUpperCase( String letter ) {
 		if ( letter.length() != 1 ) {
 			System.out.println("isUpperCase expects 1 character, returning false");
 			return false;
@@ -144,8 +144,7 @@ public class Pig
 	post: hasPunc(“cat.”) -> true
 		  hasPunc(“cat”) -> false
 	=====================================*/
-    
-    public static boolean hasPunc( String w ) {
+	public static boolean hasPunc( String w ) {
 		if( w.length() < 1 ) {
 			System.out.println("String w length cannot be less than 1.  Returning false");
 			return false;
@@ -165,7 +164,7 @@ public class Pig
 	post: beginsWithUpper("Apple") -> true
 		  beginsWithUpper("apple") -> false
 	=====================================*/
-    public static boolean beginsWithUpper( String w ) {
+	public static boolean beginsWithUpper( String w ) {
 		if( w.length() <= 0 ) {
 			System.out.println("String w length must be greater than 0. Returning false");
 			return false;
