@@ -116,9 +116,9 @@ public class Pig
 		if ( symbol.length() != 1 ){
 			System.out.println("isPunc expects 1 character, returning false");
 			return false;
-        }
+		}
 		return PUNCS.indexOf( symbol ) != -1;
-    }
+	}
 
 
 	/*=====================================
@@ -135,7 +135,7 @@ public class Pig
 		else {
 			return CAPS.indexOf( letter ) != -1;
 		}
-    }
+	}
 
 
 	/*=====================================
@@ -155,7 +155,7 @@ public class Pig
 			}
 		}
 		return false;
-    }
+	}
 	
 
 	/*=====================================
@@ -170,7 +170,7 @@ public class Pig
 			return false;
 		}
 		return isUpperCase( w.substring( 0, 1 ) );
-    }
+	}
 
 	
 	public static void main(String[] args){
