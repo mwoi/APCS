@@ -170,7 +170,7 @@ public class Pig
 			System.out.println("String w length must be greater than 0. Returning false");
 			return false;
 		}
-		return isUpperCase(w.substring(0,1) );
+		return isUpperCase( w.substring(0,1) );
     }
 
 	
@@ -186,5 +186,9 @@ public class Pig
 		System.out.println(hasPunc("...")); //should be true
 		System.out.println(hasPunc("what a good day!")); //should be true
 		System.out.println(hasPunc("today sux")); //should be false
+		
+		System.out.println(beginsWithUpper("wOWA THAT IS")); //should be false
+		System.out.println(beginsWithUpper("Wow that is great")); //should be true
+		System.out.println(beginsWithUpper("")); //should be false, error
 	}
 }
