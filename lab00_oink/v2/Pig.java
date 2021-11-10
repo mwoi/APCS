@@ -166,7 +166,10 @@ public class Pig
             beginsWithUpper("apple") -> false
       =====================================*/
     public static boolean beginsWithUpper( String w ) {
-
+		if(w.length() <= 0){
+			System.out.println("String w length must be greater than 0. Returning false");
+			return false;
+		}
 		return isUpperCase(w.substring(0,1) );
     }
 
