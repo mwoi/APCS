@@ -6,11 +6,11 @@ public class Pig
 	private static final String PUNCS = ".,:;!?";
 
 	/*=====================================
-    boolean hasA(String,String) -- checks for a letter in a String
-    pre:  w != null, letter.length() == 1
-    post: hasA("cat", "a") -> true
-    hasA("cat", "p")       -> false
-    =====================================*/
+	boolean hasA(String,String) -- checks for a letter in a String
+	pre:  w != null, letter.length() == 1
+	post: hasA("cat", "a") -> true
+	hasA("cat", "p")       -> false
+	=====================================*/
 	public static boolean hasA( String w, String letter ) {
     /* YOUR IMPLEMENTATION HERE */
 		if( letter.length() != 1 ) {
@@ -31,9 +31,9 @@ public class Pig
 
 
 	/*=====================================
-    boolean isAVowel(String) -- tells whether a letter is a vowel
-    precondition: letter.length() == 1
-    =====================================*/
+	boolean isAVowel(String) -- tells whether a letter is a vowel
+	precondition: letter.length() == 1
+	=====================================*/
 	public static boolean isAVowel( String letter ) {
     /* YOUR IMPLEMENTATION HERE */
 		if ( letter.length() != 1 ) {
@@ -45,10 +45,10 @@ public class Pig
 
 
 	/*=====================================
-    int countVowels(String) -- counts vowels in a String
-    pre:  w != null
-    post: countVowels("meatball") -> 3
-    =====================================*/
+	int countVowels(String) -- counts vowels in a String
+	pre:  w != null
+	post: countVowels("meatball") -> 3
+	=====================================*/
 	public static int countVowels( String w ) {
 		if( w.length() < 1 ) {
 			System.out.println("String w length cannot be less than 1.");
@@ -66,11 +66,11 @@ public class Pig
 
 
 	/*=====================================
-    boolean hasAVowel(String) -- tells whether a String has a vowel
-    pre:  w != null
-    post: hasAVowel("cat") -> true
-    hasAVowel("zzz")       -> false
-    =====================================*/
+	boolean hasAVowel(String) -- tells whether a String has a vowel
+	pre:  w != null
+	post: hasAVowel("cat") -> true
+	hasAVowel("zzz")       -> false
+	=====================================*/
 	public static boolean hasAVowel( String w ) {
 		if( w.length() < 1 ) {
 			System.out.println("String w length cannot be less than 1.");
@@ -87,10 +87,10 @@ public class Pig
 
 
 	/*=====================================
-    String allVowels(String) -- returns vowels in a String
-    pre:  w != null
-    post: allVowels("meatball") -> "eaa"
-    =====================================*/
+	String allVowels(String) -- returns vowels in a String
+	pre:  w != null
+	post: allVowels("meatball") -> "eaa"
+	=====================================*/
 	public static String allVowels( String w ) {
 		if( w.length() < 1 ) {
 			System.out.println("String w length cannot be less than 1.");
@@ -106,12 +106,12 @@ public class Pig
 		return output; 
 	}
 
-    /*=====================================
-    boolean isPunc(String) -- tells whether a character is punctuation
-    pre:  symbol.length() == 1
-    post: isPunc(".") -> true
-          isPunc("b") -> false
-    =====================================*/
+	/*=====================================
+	boolean isPunc(String) -- tells whether a character is punctuation
+	pre:  symbol.length() == 1
+	post: isPunc(".") -> true
+		  isPunc("b") -> false
+	=====================================*/
     public static boolean isPunc( String symbol ) {
 		if ( symbol.length() != 1 ){
 			System.out.println("isPunc expects 1 character, returning false");
@@ -121,12 +121,12 @@ public class Pig
     }
 
 
-    /*=====================================
-    boolean isUpperCase(String) -- tells whether a letter is uppercase
-    pre:  letter.length() == 1
-    post: isUpperCase("a") -> false
-          isUpperCase("A") -> true
-    =====================================*/
+	/*=====================================
+	boolean isUpperCase(String) -- tells whether a letter is uppercase
+	pre:  letter.length() == 1
+	post: isUpperCase("a") -> false
+		  isUpperCase("A") -> true
+	=====================================*/
     public static boolean isUpperCase( String letter ) {
 		if ( letter.length() != 1 ) {
 			System.out.println("isUpperCase expects 1 character, returning false");
@@ -138,12 +138,12 @@ public class Pig
     }
 
 
-    /*=====================================
-    boolean hasPunc(String) -- tells whether a String contains punctuation
-    pre:  w != null
-    post: hasPunc(“cat.”) -> true
-          hasPunc(“cat”) -> false
-    =====================================*/
+	/*=====================================
+	boolean hasPunc(String) -- tells whether a String contains punctuation
+	pre:  w != null
+	post: hasPunc(“cat.”) -> true
+		  hasPunc(“cat”) -> false
+	=====================================*/
     
     public static boolean hasPunc( String w ) {
 		if( w.length() < 1 ) {
@@ -160,10 +160,10 @@ public class Pig
 	
 
 	/*=====================================
-    boolean beginsWithUpper(String) -- tells whether 1st letter is uppercase
-    pre:  w != null and w.length() > 0
-    post: beginsWithUpper("Apple") -> true
-          beginsWithUpper("apple") -> false
+	boolean beginsWithUpper(String) -- tells whether 1st letter is uppercase
+	pre:  w != null and w.length() > 0
+	post: beginsWithUpper("Apple") -> true
+		  beginsWithUpper("apple") -> false
 	=====================================*/
     public static boolean beginsWithUpper( String w ) {
 		if( w.length() <= 0 ) {
