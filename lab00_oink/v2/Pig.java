@@ -13,15 +13,15 @@ public class Pig
     =====================================*/
 	public static boolean hasA( String w, String letter ) {
     /* YOUR IMPLEMENTATION HERE */
-		if(letter.length()!=1){
+		if( letter.length() != 1 ) {
 			System.out.println("Letter must have length 1.");
 			return false;
 		}
-		if(w.length()<1){
+		if( w.length() < 1 ) {
 			System.out.println("String w length cannot be less than 1.");
 			return false;
 		}
-		if (-1 != w.indexOf(letter)) {
+		if ( w.indexOf( letter ) != -1 ) {
 			return true;
 		}
 		else {
@@ -36,11 +36,11 @@ public class Pig
     =====================================*/
 	public static boolean isAVowel( String letter ) {
     /* YOUR IMPLEMENTATION HERE */
-		if (letter.length() != 1) {
+		if ( letter.length() != 1 ) {
 			System.out.println("Letter must have length 1.");
 			return false;
 		}     
-		return hasA(VOWELS, letter);
+		return hasA( VOWELS, letter );
 	}
 
 
@@ -50,14 +50,14 @@ public class Pig
     post: countVowels("meatball") -> 3
     =====================================*/
 	public static int countVowels( String w ) {
-		if(w.length()<1){
+		if( w.length() < 1 ) {
 			System.out.println("String w length cannot be less than 1.");
 			return -1;
 		}
 		int counter = 0;
-		for (int index = 0; index < w.length(); index++) {
-			String letter = w.substring(index, index+1);
-			if ( isAVowel(letter)) {
+		for ( int index = 0; index < w.length(); index++ ) {
+			String letter = w.substring( index, index+1 );
+			if ( isAVowel( letter ) ) {
 				counter++;
 			}
 		}
@@ -72,13 +72,13 @@ public class Pig
     hasAVowel("zzz")       -> false
     =====================================*/
 	public static boolean hasAVowel( String w ) {
-		if(w.length()<1){
+		if( w.length() < 1 ) {
 			System.out.println("String w length cannot be less than 1.");
 			return false;
 		}
-		for (int index = 0; index < w.length(); index++) {
-			String letter = w.substring(index, index+1);
-			if ( isAVowel(letter)) {
+		for ( int index = 0; index < w.length(); index++ ) {
+			String letter = w.substring( index, index+1 );
+			if ( isAVowel( letter ) ) {
 				return true; 
 			}
 		}
@@ -92,14 +92,14 @@ public class Pig
     post: allVowels("meatball") -> "eaa"
     =====================================*/
 	public static String allVowels( String w ) {
-		if(w.length()<1){
+		if( w.length() < 1 ) {
 			System.out.println("String w length cannot be less than 1.");
 			return "";
 		}
 		String output = "";
-		for (int index = 0; index < w.length(); index++) {
-			String letter = w.substring(index, index+1);
-			if ( isAVowel(letter)) {
+		for ( int index = 0; index < w.length(); index++ ) {
+			String letter = w.substring( index, index+1 );
+			if ( isAVowel( letter ) ) {
 				output += letter;
 			}
 		}
@@ -146,11 +146,11 @@ public class Pig
       =====================================*/
     
     public static boolean hasPunc( String w ) {
-		if(w.length()<1){
+		if( w.length() < 1 ) {
 			System.out.println("String w length cannot be less than 1.  Returning false");
 			return false;
 		}
-		for (int index = 0; index < w.length(); index++) {
+		for ( int index = 0; index < w.length(); index++ ) {
 			if ( isPunc( w.substring( index, index+1 ) ) ) {
 				return true;
 			}
@@ -166,11 +166,11 @@ public class Pig
             beginsWithUpper("apple") -> false
       =====================================*/
     public static boolean beginsWithUpper( String w ) {
-		if(w.length() <= 0){
+		if( w.length() <= 0 ) {
 			System.out.println("String w length must be greater than 0. Returning false");
 			return false;
 		}
-		return isUpperCase( w.substring(0,1) );
+		return isUpperCase( w.substring( 0, 1 ) );
     }
 
 	
