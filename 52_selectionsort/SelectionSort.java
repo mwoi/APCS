@@ -72,24 +72,29 @@ public class SelectionSort
     //maxPos will point to position of SELECTION (greatest value)
     int maxPos; //index of the greatest value
     int pass = 1;
+    int counterC = 0;
+    int counter = 0;
 
     for( int i = data.size() - 1; i >= 0; i-- ) {
-      System.out.println( "\nbegin pass " + pass );//diag
+      //System.out.println( "\nbegin pass " + pass );//diag
       maxPos = 0;
       
       for( int j = data.size() - pass; j >= 0; j-- ) {
+        counterC++;
         if ( data.get(j).compareTo( data.get(maxPos) ) > 0 )
             maxPos = j;
 
-        System.out.println( "maxPos: " + maxPos );//diag
-        System.out.println( data );//diag
+        //System.out.println( "maxPos: " + maxPos );//diag
+        //System.out.println( data );//diag
       } //end of loop
     Comparable temp = data.get(maxPos);
     data.set( maxPos, data.get(i) );
     data.set( i, temp );
+    counter++;
     pass++;
-    System.out.println( "after swap: " +  data );//diag
+    //System.out.println( "after swap: " +  data );//diag
     } //end of all loops, sorted 
+    System.out.println("\nSwaps: " + counter + "\nComparisons: " + counterC + "\nPasses: " + pass);
   }//end selectionSort
 
 
