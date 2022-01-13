@@ -32,7 +32,7 @@ public class Magpie2
 	{
 		String response = "";
 		String statementLower = statement.toLowerCase()
-		if ( statement.toLowerCase().indexOf(" no ") >= 0 ) //NO
+		if ( statement.toLowerCase().indexOf("no") >= 0 ) //NO
 		{
 			response = "Why so negative?";
 		}
