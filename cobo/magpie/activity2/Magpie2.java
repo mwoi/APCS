@@ -31,28 +31,29 @@ public class Magpie2
 	public String getResponse(String statement)
 	{
 		String response = "";
+		String statementLower = statement.toLowerCase()
 		if ( statement.toLowerCase().indexOf(" no ") >= 0 ) //NO
 		{
 			response = "Why so negative?";
 		}
-		else if ( statement.toLowerCase().indexOf("mother") >= 0 //FAMILY
-			|| statement.toLowerCase().indexOf("father") >= 0
-			|| statement.toLowerCase().indexOf("sister") >= 0
-			|| statement.toLowerCase().indexOf("brother") >= 0
+		else if ( statementLower.indexOf("mother") >= 0 //FAMILY
+			|| statementLower.indexOf("father") >= 0
+			|| statementLower.indexOf("sister") >= 0
+			|| statementLower.indexOf("brother") >= 0
 			)
 		{
 			response = "Tell me more about your family.";
 		}
-		else if ( statement.toLowerCase().indexOf("dog") >= 0 //PETS
-			|| statement.toLowerCase().indexOf("cat") >= 0
-			|| statement.toLowerCase().indexOf("fish") >= 0
-			|| statement.toLowerCase().indexOf("bird") >= 0
-			|| statement.toLowerCase().indexOf("pet") >= 0
+		else if ( statementLower.indexOf("dog") >= 0 //PETS
+			|| statementLower.indexOf("cat") >= 0
+			|| statementLower.indexOf("fish") >= 0
+			|| statementLower.indexOf("bird") >= 0
+			|| statementLower.indexOf("pet") >= 0
 			)
 		{
 			response = "Tell me more about your pets?";
 		}
-		else if ( statement.toLowerCase().indexOf("mykolyk") >= 0 ) //TEACHER
+		else if ( statementLower.indexOf("mykolyk") >= 0 ) //TEACHER
                 {
                         response = "He sounds like a good teacher.";
                 }
