@@ -31,9 +31,14 @@ public class Magpie2
 	public String getResponse(String statement)
 	{
 		String response = "";
+<<<<<<< HEAD
 		String statementLower = statement.toLowerCase();
 
 		if ( statement.toLowerCase().indexOf(" no ") >= 0 ) //NO
+=======
+		String statementLower = statement.toLowerCase()
+		if ( statement.toLowerCase().indexOf("no") >= 0 ) //NO
+>>>>>>> 3749d9727220d51db9b94eee862971b6b147b311
 		{
 			response = "Why so negative?";
 		}
