@@ -31,38 +31,35 @@ public class Magpie2
 	public String getResponse(String statement)
 	{
 		String response = "";
-		if (statement.indexOf(" no ") >= 0) 
-// no doesn't work when it's just no
+		if ( statement.toLowerCase().indexOf(" no ") >= 0 ) //NO
 		{
 			response = "Why so negative?";
 		}
-		else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
-				|| statement.indexOf("sister") >= 0
-				|| statement.indexOf("brother") >= 0)
+		else if ( statement.toLowerCase().indexOf("mother") >= 0 //FAMILY
+			|| statement.toLowerCase().indexOf("father") >= 0
+			|| statement.toLowerCase().indexOf("sister") >= 0
+			|| statement.toLowerCase().indexOf("brother") >= 0
+			)
 		{
 			response = "Tell me more about your family.";
 		}
-		else if (statement.indexOf("dog") >= 0
-				|| statement.indexOf("cat") >= 0
-				|| statement.indexOf("fish") >= 0
-				|| statement.indexOf("bird") >= 0
-				|| statement.indexOf("pets") >= 0)
-                                || statement.indexOf("cats") >= 0
-                                || statement.indexOf("fishes") >= 0
-                                || statement.indexOf("birds") >= 0
+		else if ( statement.toLowerCase().indexOf("dog") >= 0 //PETS
+			|| statement.toLowerCase().indexOf("cat") >= 0
+			|| statement.toLowerCase().indexOf("fish") >= 0
+			|| statement.toLowerCase().indexOf("bird") >= 0
+			|| statement.toLowerCase().indexOf("pet") >= 0
+			)
 		{
 			response = "Tell me more about your pets?";
 		}
-		else if (statement.indexOf("Mykolyk") >= 0)
+		else if ( statement.toLowerCase().indexOf("mykolyk") >= 0 ) //TEACHER
                 {
                         response = "He sounds like a good teacher.";
                 }
-		else if (statement.length() < 1)
+		else if ( statement.trim().length() == 0 ) //EMPTY OR ALL WHITESPACE STATEMENT
                 {
-                        response = "Say something please.";
+                        response = "Say something, please.";
                 }
-
 		else
 		{
 			response = getRandomResponse();
@@ -76,7 +73,7 @@ public class Magpie2
 	 */
 	private String getRandomResponse()
 	{
-		final int NUMBER_OF_RESPONSES = 4;
+		final int NUMBER_OF_RESPONSES = 6;
 		double r = Math.random();
 		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
 		String response = "";
@@ -96,6 +93,14 @@ public class Magpie2
 		else if (whichResponse == 3)
 		{
 			response = "You don't say.";
+		}
+		else if (whichResponse == 4)
+		{
+			response = "Who asked?";
+		}
+		else if (whichResponse == 5)
+		{
+			response = "Mhmm.";
 		}
 
 		return response;
