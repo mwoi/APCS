@@ -31,7 +31,8 @@ public class Magpie2
 	public String getResponse(String statement)
 	{
 		String response = "";
-		String statementLower = statement.toLowerCase()
+		String statementLower = statement.toLowerCase();
+
 		if ( statement.toLowerCase().indexOf(" no ") >= 0 ) //NO
 		{
 			response = "Why so negative?";
@@ -51,11 +52,29 @@ public class Magpie2
 			|| statementLower.indexOf("pet") >= 0
 			)
 		{
-			response = "Tell me more about your pets?";
+			response = "Tell me more about your pets.";
 		}
 		else if ( statementLower.indexOf("mykolyk") >= 0 ) //TEACHER
                 {
                         response = "He sounds like a good teacher.";
+                }
+		else if ( statementLower.indexOf("alive") >= 0 //ALIVE
+			&& statementLower.indexOf("you") >= 0
+			)
+                {
+                        response = "I can see you.";
+                }
+		else if ( statementLower.indexOf("banana") >= 0 //FRUIT
+			|| statementLower.indexOf("apple") >= 0
+			|| statementLower.indexOf("grape") >= 0
+			|| statementLower.indexOf("orange") >= 0
+			) 
+                {
+                        response = "Fruit are great, I like mangos.";
+                }
+		else if ( statementLower.indexOf("magpie") >= 0 ) //MAGPIE
+                {
+                        response = "Tell me more about magpies.";
                 }
 		else if ( statement.trim().length() == 0 ) //EMPTY OR ALL WHITESPACE STATEMENT
                 {
