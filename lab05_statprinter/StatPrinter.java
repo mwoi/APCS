@@ -64,6 +64,8 @@ public class StatPrinter
   //          _frequency.get(i) returns frequency of i in data
   //eg, for data [2,3,2,5,2,3]
   //  _frequency would be [0,0,3,2,0,1]
+  
+  //StatPrinter is O(n^2)
   public StatPrinter( ArrayList <Integer> data ) 
   { 
     _frequency = new ArrayList<Integer>();
@@ -77,19 +79,19 @@ public class StatPrinter
     	}
     	_frequency.add(counter);
     }
-    
   }
 
 
   //*************** QUESTION 01 **************************
   //precond:  data.size() > 0
   //postcond: returns largest integer in data
+  
   //max() is O(n)
   public Integer max( ArrayList <Integer> data ) 
   { 
     Integer retVal = 0;
-    for ( Integer item : _data){
-    	if(item > retVal){
+    for ( Integer item : data ) {
+    	if( item > retVal ) {
     		retVal = item;
     	}
     }
@@ -109,7 +111,10 @@ public class StatPrinter
   //    isLocalMode(5) -> true
   public boolean isLocalMode( int i ) 
   { 
-    /* YOUR IMPLEMENTATION HERE */
+    if ( i != 0 && i != _frequency.size() - 1 && _frequency.get(i) > _frequency.get(i - 1) && _frequency.get(i) > _frequency.get(i + 1) )
+    	return true;
+    else
+    	return false;
   }
 
 
@@ -117,7 +122,7 @@ public class StatPrinter
   //postcond: returns list of modes in _frequency
   public ArrayList<Integer> getLocalModes() 
   {
-    /* YOUR IMPLEMENTATION HERE */
+    return _frequency;
 
   }
 
