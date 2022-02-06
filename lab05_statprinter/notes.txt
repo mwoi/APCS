@@ -1,25 +1,24 @@
-Team Phantom Tollbooth (Clyde Sinclair, Fierce Dragon)
-APCS pd0
+Team Slightly Under-ripe Bananas
+APCS pd7
 L05 -- pulling it together
-2022-02-03r
-time spent:  hrs
+2022-02-06r
+time spent: 2 hrs
 
 
 DISCO
 ------------------------------------------------
-* 
+* Math.ceil rounds up a double
+* Using a foreach loop makes your code look cleaner
 ================================================
 
 
 QCC
 ------------------------------------------------
-* 
+* Not sure if getLocalModes() returns the frequency of the local mode instead of the local modes itself
 ================================================
 
 
 MISC
 ------------------------------------------------
-* 
+*
 ================================================
-
-
