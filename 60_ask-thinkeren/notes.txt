@@ -1,0 +1,29 @@
+Team Slightly Under-ripe Bananas (Joshua Yagupsky, Marcus Wu, Ivina Wang)
+APCS pd7
+HW#60 -- A Termite is-a Turtle, a Thinker is-a Turtle
+2022-02-07r
+time spent: .5 hrs
+
+DISCO:
+* Although we seemed to be improving towards the end, the major problem was that people were
+ confused about who to give the cards to. Others were confused who gave them the cards in the
+ first place.
+* To make the algorithm simpler, it is best to set the base case to one card- because we know that
+ the card will always be sorted
+
+QCC:
+* What is an efficient way to keep track of who has already received a card/who hasn't?
+
+THINKER FIRMWARE:
+1. Wait until you receive cards from another person.
+2. If you receive only one card, return it to the person who gave it to you
+  (they will be standing up with their arms pointing towards you.)
+3. Otherwise, cut the deck in half. Find two neighbors with no cards, give each half of the deck,
+  and stand up with your arms pointing towards them.
+4. When you receive the two piles of cards from your neighbors, MERGE them.
+5. Give this new pile to the person who gave you the original pile.
+
+How to MERGE two piles:
+1. Have each pile with cards face up. Don't look at any other cards besides the top cards.
+2. Place the card with greater value upside down between the two piles.
+3. Repeatedly place the card with greater value on top of the upside-down pile until no more cards are left.
