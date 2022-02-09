@@ -18,15 +18,27 @@ public class MergeSort
   private static int[] merge( int[] a, int[] b )
   {
 	int[] output = new int[ ( a.length + b.length ) ];
-	
-	/*for ( int i = 0; i < a.length() - 1; i++ ) {
-		for ( int j = 0; j < b.length() - 1; i++ ) {
-			if ( a[i] < b[j] ) {
-				set(output, 0, a[i]);
+	int checkA = 0;
+	int checkB = 0;
+
+	for ( int i = 0; i < output.length - 1; i++ ) {
+		if ( checkA == ( a.length - 1 ) ) {
+			output[i] = b[checkB];
+			checkB++;
+		} else if ( checkB == ( b.length - 1 ) ) {
+			output[i] = a[checkA];
+			checkA++;
+		} else {
+			if ( a[checkA] < b[checkB] ) {
+				output[i] = a[checkA];
+				checkA++;
+			} else {
+				output[i] = b[checkB];
+				checkB++;
 			}
 		}
-	}*/
-	
+	}
+
 	return output;
   }//end merge()
 
@@ -64,7 +76,7 @@ public class MergeSort
   //main method for testing
   public static void main( String [] args )
   {
-    /*~~~~~~~~~~~~~~ Ye Olde Tester Bar ~~~~~~~~~~~~~~
+
       int[] arr0 = {0};
       int[] arr1 = {1};
       int[] arr2 = {1,2};
@@ -90,6 +102,7 @@ public class MergeSort
       printArray( sort( arr5 ) );
       printArray( sort( arr6 ) );
       printArray( sort( arr7 ) );
+    /*~~~~~~~~~~~~~~ Ye Olde Tester Bar ~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
