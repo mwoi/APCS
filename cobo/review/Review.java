@@ -162,4 +162,9 @@ public class Review {
       return randomNegativeAdj();
     }
   }
+
+  public static void main( String[] args )
+  {
+    
+  }
 }
