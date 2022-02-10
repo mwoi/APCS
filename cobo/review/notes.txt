@@ -9,4 +9,4 @@ introduction (reviews and sentimental value)
 
 1.
   a. public static double sentimentalVal( String word )
-  b. sentimentalVal requires a String input as its parameter.  
+  b. sentimentVal requires a String input as its parameter. if you pass an int, it will return an error: int cannot be converted to String.
