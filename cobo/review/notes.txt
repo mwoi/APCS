@@ -1,0 +1,12 @@
+Marcus Wu
+APCS pd7
+2022-02-16
+
+consumer review lab
+
+activity 1
+introduction (reviews and sentimental value)
+
+1.
+  a. public static double sentimentalVal( String word )
+  b. sentimentalVal requires a String input as its parameter.  
