@@ -33,4 +33,8 @@ introduction (reviews and sentimental value)
 activity 2
 sentiment value and star ratings
 ================================
-
+4.
+  a. totalSentiment takes in the name of a txt file as an input, then reads the content
+     of the txt file, converting it to a string, and then iterates through every word of
+     the string to add up the sentimentVal's of each word, returning the total.
+  b. 
