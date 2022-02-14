@@ -6,8 +6,12 @@ import java.util.Random;
 import java.io.*;
 
 /**
- * Class that contains helper methods for the Review Lab
- **/
+Team Slightly Under-ripe Bananas (Joshua Yagupsky, Marcus Wu, Ivina Wang)
+APCS pd7
+L06 -- Read/Review/Expand
+2022-02-13
+time spent: -- 5 hrs
+**/
 public class Review {
 
   private static HashMap<String, Double> sentiment = new HashMap<String, Double>();
@@ -37,7 +41,7 @@ public class Review {
       Scanner input = new Scanner(new File("positiveAdjectives.txt"));
       while(input.hasNextLine()){
         String temp = input.nextLine().trim();
-        System.out.println(temp);
+        //System.out.println(temp);
         posAdjectives.add(temp);
       }
       input.close();
@@ -163,7 +167,7 @@ public class Review {
     }
   }
 
-  public static Double totalSentiment(String fileName)
+  public static double totalSentiment(String fileName)
   {
     String str = textToString(fileName);
     Scanner input = new Scanner(str);
@@ -173,31 +177,74 @@ public class Review {
     }
     return total;
   }
-  
+
   public static int starRating( String fileName )
   {
     double rating = totalSentiment( fileName );
-    if ( rating > 30.0 )
-      return 5; //5 star
-    else if ( rating > 20.0 )
+    if ( rating > 15.0 )
       return 4; //4 star
     else if ( rating > 10.0 )
       return 3; //3 star
-    else if ( rating > 0 )
+    else if ( rating > 5.0 )
       return 2; //2 star
-    else if ( rating > -5.0 )
+    else if ( rating > 0 )
       return 1; //1 star
     else
       return 0; //0 star
   }
-  
+
+  // public static String fakeReview( String fileName){
+  //   String str = textToString(fileName);
+  //   String review = "";
+  //   int startIndex = 0;
+  //   while(str.indexOf("*", startIndex) != -1){
+  //     review += str.substring(startIndex, str.indexOf("*", startIndex));
+  //       review += randomAdjective();
+  //     startIndex = str.indexOf(" ", str.indexOf("*", startIndex));
+  //   }
+  //   review += str.substring(startIndex);
+  //   return review;
+  // }
+
+  public static String fakeReview( String filename ){
+    String str = textToString(filename);
+    String[] words = str.split(" ");
+    String review = "";
+    String punc;
+    boolean happy = totalSentiment(filename) > 0;
+    for (String word : words){
+      punc = getPunctuation(word);
+      word = word.substring(0,word.length()-punc.length());
+      if (word.substring(0,1).equals("*")){
+        if (sentimentVal(word.substring(1)) > 0 && !happy){
+          word = randomNegativeAdj();
+        }
+        else if (sentimentVal(word.substring(1)) <= 0 && happy){
+          word = randomPositiveAdj();
+        }
+        else{
+          word = word.substring(1);
+        }
+      }
+      review += word + punc + " ";
+    }
+    return review;
+  }
+
   public static void main( String[] args )
   {
-    System.out.println( totalSentiment("SimpleReview.txt") );
-    System.out.println( starRating("SimpleReview.txt") );
-    System.out.println( totalSentiment("MeanReview.txt") );
-    System.out.println( starRating("MeanReview.txt") );
-    System.out.println( totalSentiment("BadReview.txt") );
-    System.out.println( starRating("BadReview.txt") );
+    // System.out.println("REVIEWS AND STAR RATINGS:\n");
+    // System.out.println( totalSentiment("SimpleReview.txt") );
+    // System.out.println( starRating("SimpleReview.txt") );
+    // System.out.println( totalSentiment("MeanReview.txt") );
+    // System.out.println( starRating("MeanReview.txt") );
+    // System.out.println( totalSentiment("BadReview.txt") );
+    // System.out.println( starRating("BadReview.txt") );
+    // System.out.println( totalSentiment("GreatReview.txt") );
+    // System.out.println( starRating("GreatReview.txt") );
+    System.out.println("FAKE REVIEWS:\n");
+    System.out.println( fakeReview("SimpleReview.txt"));
+    System.out.println( fakeReview("BadReview.txt"));
+    System.out.println( fakeReview("GreatReview.txt"));
   }
 }
