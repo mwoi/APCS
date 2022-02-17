@@ -1,0 +1,13 @@
+Team Slightly Under-ripe Bananas (Joshua Yagupsky, Marcus Wu, Ivina Wang)
+APCS pd7
+HW65 -- How Many Queens Can a Thinker Place, If a Thinker Can Place Queens...
+2022-02-16
+time spent: 1 hr
+
+Notes:
+- There are two print methods, printSolution() and a toString()
+printSolution prints out whether the box has a Queen, and if not, it prints out "-"
+toString () only prints out the arrays, which contains 0, -1, -2, etc.
+- The algorithm works by placing queens in a left to right, top to bottom order. After placing a queen in a column,
+we repeatedly move over one column and place another queen in a valid location. If there are no valid locations, we go back a column and
+move the queen to the next valid spot.
