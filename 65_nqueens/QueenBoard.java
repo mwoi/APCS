@@ -1,3 +1,11 @@
+/*
+Team Slightly Under-ripe Bananas (Joshua Yagupsky, Marcus Wu, Ivina Wang)
+APCS pd7
+HW65 -- How Many Queens Can a Thinker Place, If a Thinker Can Place Queens...
+2022-02-16r
+time spent: 1 hr
+*/
+
 /***
  * class QueenBoard
  * Generates solutions for N-Queens problem.
@@ -11,7 +19,7 @@ public class QueenBoard
 
   private int[][] _board;
 
-  public QueenBoard( int size ) 
+  public QueenBoard( int size )
   {
     _board = new int[size][size];
   }
@@ -19,10 +27,10 @@ public class QueenBoard
 
   /***
    * precondition: board is filled with 0's only.
-   * postcondition: 
-   * If a solution is found, board shows position of N queens, 
+   * postcondition:
+   * If a solution is found, board shows position of N queens,
    * returns true.
-   * If no solution, board is filled with 0's, 
+   * If no solution, board is filled with 0's,
    * returns false.
    */
   public boolean solve()
@@ -39,9 +47,9 @@ public class QueenBoard
 
 
   /**
-   *Helper method for solve. 
+   *Helper method for solve.
    */
-  private boolean solveH( int col ) 
+  private boolean solveH( int col )
   {
     if ( col >= _board.length )
       return true;
@@ -81,9 +89,11 @@ public class QueenBoard
   //================= YE OLDE SEPARATOR =================
 
   /***
-   * <General description>
-   * precondition: 
-   * postcondition: 
+   * sets the value of a square on the board to 1, and decreases every value by 1 in the rightward
+     and down-rightward directions
+   * precondition: all of the currently placed queens are to the left of the queens we are adding
+   * postcondition: queens added at [row][col] and all positions to the right, are marked so
+     that a queens cannot be placed there
    */
   private boolean addQueen(int row, int col)
   {
@@ -107,9 +117,10 @@ public class QueenBoard
 
 
   /***
-   * <General description>
-   * precondition: 
-   * postcondition: 
+   * sets the value of a square on the board to 0, and increases every value by 1 in the rightward,
+     uprightward, and down-rightward directions
+   * precondition: all of the currently placed queens are to the left of the given we are removing
+   * postcondition: queen removed at [row][col] and all of the positions marked are now reset
    */
   private boolean removeQueen(int row, int col){
     if ( _board[row][col] != 1 ) {
@@ -133,9 +144,10 @@ public class QueenBoard
 
 
   /***
-   * <General description>
-   * precondition: 
-   * postcondition: 
+   * Prints out the arrays that make up the board, with 1's, 0's, and negative numbers indicating queens,
+     possible positions of queens, and positions where queens cannot be placed, respectively.
+   * precondition: A board has been created with size > 0
+   * postcondition: The array of ints has been printed
    */
   public String  toString()
   {
@@ -156,46 +168,46 @@ public class QueenBoard
     QueenBoard b = new QueenBoard(5);
     b.solve();
     System.out.println();
-    
+
     QueenBoard a = new QueenBoard(8);
     a.solve();
     System.out.println();
-    
+
     QueenBoard c = new QueenBoard(2);
     c.solve();
     System.out.println();
-   
+
     //System.out.println(b);
     /** should be...
-       0	0	0	0	0	
-       0	0	0	0	0	
-       0	0	0	0	0	
-       0	0	0	0	0	
-       0	0	0	0	0	
+       0	0	0	0	0
+       0	0	0	0	0
+       0	0	0	0	0
+       0	0	0	0	0
+       0	0	0	0	0
     */
 
     //b.addQueen(3,0);
     //b.addQueen(0,1);
     //System.out.println(b);
     /** should be...
-       0	1	-1	-2	-1	
-       0	0	-2	0	0	
-       0	-1	0	-1	0	
-       1	-1	-1	-1	-2	
-       0	-1	0	0	0	
+       0	1	-1	-2	-1
+       0	0	-2	0	0
+       0	-1	0	-1	0
+       1	-1	-1	-1	-2
+       0	-1	0	0	0
     */
 
     //b.removeQueen(3,0);
     //System.out.println(b);
     /** should be...
-       0	1	-1	-1	-1	
-       0	0	-1	0	0	
-       0	0	0	-1	0	
-       0	0	0	0	-1	
-       0	0	0	0	0	 
+       0	1	-1	-1	-1
+       0	0	-1	0	0
+       0	0	0	-1	0
+       0	0	0	0	-1
+       0	0	0	0	0
     */
-   
-    
+
+
   }
 
 }//end class
