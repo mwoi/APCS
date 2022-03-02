@@ -220,3 +220,10 @@ class TourFinder
 
       //If made it this far, path did not lead to tour, so back up...
       // (Overwrite number at this cell
+      _board[x][y] = 0;
+
+      System.out.println( this ); //refresh screen
+    }
+  }//end findTour()
+
+}//end class TourFinder
