@@ -1,0 +1,8 @@
+Team Slightly Under-ripe Bananas (Joshua Yagupsky, Marcus Wu, Ivina Wang)
+APCS pd7
+HW71 -- Whut Dis.
+2022-03-7
+time spent: hr
+
+Could this potentially be used for a sorting algorithm? We can pick some c, and use the entire array as the range.
+Then we could do the same for each half of the resulting array, and so on.
