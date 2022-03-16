@@ -1,0 +1,23 @@
+Jonathan Song, Max Schneider, Marcus Wu
+APCS pd7
+HW69 -- Making Sense
+2022-03-02
+time spent: 
+
+q0: 
+* No. Sometimes when the code is run, no solution can be found for quite some time.
+
+q1: Same, but for closed tour.
+* It will eventually find the solution, so long as there is at least one solution for the grid.
+
+q2: How do you explain the increase in execution time as n increases?
+* More squares involved in the grid can increase the time exponentially.
+
+q3: Thoughts on optimization?
+* The program could prioritize squares with the lowest number of possible legal paths.
+
+ALGO for finding way out of a maze
+* Continuously check if there is a wall (" ") to the left of the hero.
+* If so, walk forward. If not, turn left and walk forward one space.
+* If the hero cannot walk forward because there is a wall in the way, turn left. If the hero has been in the same position more than once turn right.
+* This algorithm does not work if the maze is the walls are not completely connected. (i.e. a standalone island)
