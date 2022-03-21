@@ -1,3 +1,11 @@
+/**
+Team Explorers: Eric He + bob, Marcus Wu + nat, Russell Goychayev + bob
+APCS
+L07: But These Go Up To Eleven
+2022-03-21
+Time Spent: 1.0 hours
+*/
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -62,7 +70,13 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+		for ( int k = cards.size() - 1; k >= 0; k-- ) {
+			int r = (int) ( Math.random() * (k+1) );
+			Card temp = cards.get(k);
+			cards.set( k, cards.get(r) );
+			cards.set( r, temp);
+		}
+		size = cards.size();
 	}
 
 	/**

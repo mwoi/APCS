@@ -1,4 +1,12 @@
 /**
+Team Explorers: Eric He + bob, Marcus Wu + nat, Russell Goychayev + bob
+APCS
+L07: But These Go Up To Eleven
+2022-03-21
+Time Spent: 1.0 hours
+*/
+
+/**
  * This is a class that tests the Deck class.
  */
 public class DeckTester {
@@ -9,8 +17,8 @@ public class DeckTester {
 	 */
 	public static void main(String[] args) {
 		String[] ranks = {"jack", "queen", "king"};
-		String[] suits = {"blue", "red"};
-		int[] pointValues = {11, 12, 13};
+		String[] suits = {"diamonds", "clubs", "hearts", "spades"};
+		int[] pointValues = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
 		Deck d = new Deck(ranks, suits, pointValues);
 
 		System.out.println("**** Original Deck Methods ****");
