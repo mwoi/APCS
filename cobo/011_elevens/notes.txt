@@ -1,0 +1,33 @@
+Team Explorers: Eric He + bob, Marcus Wu + nat, Russell Goychayev + bob
+APCS
+L07: But These Go Up To Eleven
+2022-03-18
+Time Spent: 1.0 hours
+
+03/18/2022
+Activity 1
+Card
+• - rank 
+• - suit
+• - pointValue
+• constructor (String, String)
+• rank accessor
+• suit accessor
+• pointValue accessor 
+• isEqual(card, card)
+• toString // rank of suit (point value = pointVal
+
+
+03/19/2022
+03/20/2022
+Activity 2
+Question 1: Cards are a field of deck.
+Question 2: It contains 6 cards because a deck contains a number of cards equal to ranks.length * suits.length. 
+Question 3: 
+String[] ranks = {"ace", "king", "queen", "jack", "10", "9", "8", "7", "6", "5", "4", "3", "2"};
+String[] suits = {"spades", "hearts", "clubs", "diamonds"};
+int[] pointValues = {11, 10, 10, 10, 10, 9, 8, 7, 6, 5, 4, 3, 2};
+Deck deck = new Deck(ranks, suits, pointValues);
+	Question 4: The order of suits does not matter, while the orders of ranks and pointValues do matter. They must correspond by index because this is the way I implemented it.
+Activity 3
+
