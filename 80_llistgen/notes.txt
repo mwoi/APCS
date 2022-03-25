@@ -1,0 +1,16 @@
+Team Purple Pineapples: Jason Zhou, Marcus Wu, Russell Goychayev
+APCS pd7
+HW80: Generically Speaking
+2022-03-25
+time spent: 1.0 hr
+
+Q:
+  Why do we need to type cast to T when the methods should return T?
+
+C:
+There was an error message for addLast even though we used the code from the library:
+$ java ListTester                                                                       HEAD->NULL                                                                              HEAD->RZA->NULL                                                                         Exception in thread "main" java.lang.NullPointerException                                      at LList.addLast(LList.java:188)                                                        at LList.add(LList.java:46)                                                             at ListTester.main(ListTester.java:21)
+I don't know how but it fixed itself
+
+C:
+  
