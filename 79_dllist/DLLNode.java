@@ -8,7 +8,7 @@ public class DLLNode
 {
   //instance vars
   private String data;
-  private DLLNode nextNode; 
+  private DLLNode nextNode;
   private DLLNode previousNode;
 
   // constructor
@@ -30,8 +30,8 @@ public class DLLNode
   {
     return nextNode;
   }
-  
-  public DLLNode getPrevious() 
+
+  public DLLNode getPrev()
   {
     return previousNode;
   }
@@ -51,7 +51,7 @@ public class DLLNode
     return this.nextNode;
   }
 
-  public DLLNode setPrevious( DLLNode newPrevious )
+  public DLLNode setPrev( DLLNode newPrevious )
   {
     this.previousNode = newPrevious;
     return this.previousNode;
@@ -69,7 +69,7 @@ public class DLLNode
   //main method for testing
   public static void main( String[] args )
   {
-    
+
 
     //Q: when head ptr moves to next node in list, what happens to the node it just left?
 
@@ -83,4 +83,3 @@ public class DLLNode
   }//end main
 
 }//end class LLNode
-

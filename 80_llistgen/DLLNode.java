@@ -7,23 +7,23 @@
 public class DLLNode<T>
 {
   //instance vars
-  private Object data;
+  private T data;
   private DLLNode nextNode;
-  private DLLNode previousNode;
+  private DLLNode prevNode;
 
   // constructor
-  public DLLNode( Object value, DLLNode next, DLLNode previousNode )
+  public DLLNode( T value, DLLNode previous, DLLNode next )
   {
     this.data = value;
     this.nextNode = next;
-    this.previousNode = previousNode;
+    this.prevNode = previous;
   }
 
 
   //--------------v  ACCESSORS  v--------------
   public T getCargo()
   {
-    return (T) data;
+    return data;
   }
 
   public DLLNode getNext()
@@ -33,7 +33,7 @@ public class DLLNode<T>
 
   public DLLNode getPrev()
   {
-    return previousNode;
+    return prevNode;
   }
   //--------------^  ACCESSORS  ^--------------
 
@@ -42,7 +42,7 @@ public class DLLNode<T>
   public T setCargo( T newCargo )
   {
     this.data = newCargo;
-    return (T) this.data;
+    return this.data;
   }
 
   public DLLNode setNext( DLLNode newNext )
@@ -51,10 +51,10 @@ public class DLLNode<T>
     return this.nextNode;
   }
 
-  public DLLNode setPrevious( DLLNode newPrevious )
+  public DLLNode setPrev( DLLNode newPrevious )
   {
-    this.previousNode = newPrevious;
-    return this.previousNode;
+    this.prevNode = newPrevious;
+    return this.prevNode;
   }
   //--------------^  MUTATORS  ^--------------
 
