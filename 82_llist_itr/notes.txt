@@ -1,0 +1,10 @@
+Team Purple Pineapples: Jason Zhou, Russell Goychayev, Marcus Wu
+APCS pd7
+HW82 -- Roll Your Own Iterator
+2022-03-27
+time spent: 0.7 hr
+
+Disco: 
+    
+QCC:
+    -In what situation would you have a static inner class?
