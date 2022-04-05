@@ -1,47 +1,37 @@
-
-/**
- *Team Purple Pineapples: Jason Zhou, Marcus Wu, Russell Goychayev
- *APCS pd7
- *HW79: A YouTube Host Are You
- *2022-03-17
- *time spent: 0.5 hr
- */
-
 /***
- * class LList
- * Implements a linked list of LLNodes, each containing String data
+ * class LList v6
+ * Implements a linked list of DLLNodes.
+ * Version 06 is iterable via FOREACH loop
+ * (...because modifications were made to local List interface.)
  **/
+package LLists;
 
-/** (Copied lib code so i can review this in the future)
- * DISCO: N/A
- *
- * QCC: N/A
- *
- * Algo: for add we create holder that points to wherever we want to add. We (break apart) the pointer to the next node
- *       at insertion and point it to the con cell that we want and we have the con cell point to the next node.
- *
- *       for remove we do the same thing but we don't have that con cell, we just have the node point to two nodes ahead.
- *
- *       NOW WE DO THE SAME THING AS ABOVE BUT WE ADD THE PREVIOUS POINTERS !!!
- */
-public class LList<T> implements List //your List.java must be in same dir
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+
+public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 {
+  // Your List.java must be in same dir to supersede
+  // built-in Java List interface
 
   //instance vars
-  private DLLNode _head, _tail; //pointers to first and last nodes
+  private DLLNode<T> _head, _tail; //pointers to first and last nodes
   private int _size;
 
   // constructor -- initializes instance vars
-  public LList( )
+  public LList()
   {
     _head = _tail = null; //at birth, a list has no elements
     _size = 0;
   }
 
 
+  //--------------------------------------------------------
   //--------------v  List interface methods  v--------------
+  //--------------------------------------------------------
 
-  //add a node to end of list
+  //append a new node to end of list
   public boolean add( T newVal )
   {
     addLast( newVal );
@@ -58,20 +48,20 @@ public class LList<T> implements List //your List.java must be in same dir
     else if ( index == size() )
       addLast( newVal );
 
-    DLLNode newNode = new DLLNode( newVal, null, null );
+    DLLNode<T> newNode = new DLLNode<T>( newVal, null, null );
 
     //if index==0, insert node before head node
     if ( index == 0 )
       addFirst( newVal );
     else {
-      DLLNode tmp1 = _head; //create alias to head
+      DLLNode<T> tmp1 = _head; //create alias to head
 
       //walk tmp1 to node before desired node
       for( int i=0; i < index-1; i++ )
         tmp1 = tmp1.getNext();
 
       //init a pointer to node at insertion index
-      DLLNode tmp2 = tmp1.getNext();
+      DLLNode<T> tmp2 = tmp1.getNext();
 
       //insert new node
       newNode.setNext( tmp2 );
@@ -81,6 +71,7 @@ public class LList<T> implements List //your List.java must be in same dir
 
       //increment size attribute
       _size++;
+
     }
   }//end add-at-index
 
@@ -96,7 +87,7 @@ public class LList<T> implements List //your List.java must be in same dir
     else if ( index == size()-1 )
       return removeLast();
     else {
-      DLLNode tmp1 = _head; //create alias to head
+      DLLNode<T> tmp1 = _head; //create alias to head
 
       //walk to node before desired node
       for( int i=0; i < index-1; i++ ) {
@@ -124,7 +115,7 @@ public class LList<T> implements List //your List.java must be in same dir
       throw new IndexOutOfBoundsException();
 
     T retVal;
-    DLLNode tmp = _head; //create alias to head
+    DLLNode<T> tmp = _head; //create alias to head
 
     //walk to desired node
     for( int i=0; i < index; i++ )
@@ -141,7 +132,7 @@ public class LList<T> implements List //your List.java must be in same dir
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
 
-    DLLNode tmp = _head; //create alias to head
+    DLLNode<T> tmp = _head; //create alias to head
 
     //walk to desired node
     for( int i=0; i < index; i++ )
@@ -160,7 +151,16 @@ public class LList<T> implements List //your List.java must be in same dir
   //return number of nodes in list
   public int size() { return _size; }
 
+
+  //return an Iterator over this list
+  public Iterator<T> iterator()
+  {
+    return new MyIterator(this);
+  }
+
+  //--------------------------------------------------------
   //--------------^  List interface methods  ^--------------
+  //--------------------------------------------------------
 
 
   //--------------v  Helper methods  v--------------
@@ -168,7 +168,7 @@ public class LList<T> implements List //your List.java must be in same dir
   public void addFirst( T newFirstVal )
   {
     //insert new node before first node (prev=null, next=_head)
-    _head = new DLLNode( newFirstVal, null, _head );
+    _head = new DLLNode<T>( newFirstVal, null, _head );
 
     if ( _size == 0 )
       _tail = _head;
@@ -180,8 +180,8 @@ public class LList<T> implements List //your List.java must be in same dir
 
   public void addLast( T newLastVal )
   {
-    //insert new node after last node (prev=_last, next=null)
-    _tail = new DLLNode( newLastVal, _tail, null );
+    //insert new node before first node (prev=_last, next=null)
+    _tail = new DLLNode<T>( newLastVal, _tail, null );
 
     if ( _size == 0 )
       _head = _tail;
@@ -210,6 +210,7 @@ public class LList<T> implements List //your List.java must be in same dir
     return retVal;
   }
 
+
   public T removeLast()
   {
     T retVal = getLast();
@@ -230,7 +231,7 @@ public class LList<T> implements List //your List.java must be in same dir
   public String toString()
   {
     String retStr = "HEAD->";
-    DLLNode tmp = _head; //init tr
+    DLLNode<T> tmp = _head; //init tr
     while( tmp != null ) {
       retStr += tmp.getCargo() + "->";
       tmp = tmp.getNext();
@@ -240,9 +241,72 @@ public class LList<T> implements List //your List.java must be in same dir
   }
 
 
+
+  /***
+   * inner class MyIterator
+   * Adheres to specifications given by Iterator interface.
+   * Uses dummy node to facilitate iterability over LList.
+   **/
+  private class MyIterator implements Iterator<T>
+  {
+    private DLLNode<T> _dummy;   // dummy node to tracking pos
+    private boolean _okToRemove; // flag indicates next() was called
+
+    //constructor
+    public MyIterator(LList<T> pointer)
+    {
+      _dummy = pointer._head;
+      /* YOUR CODE HERE */
+
+    }
+
+    //-----------------------------------------------------------
+    //--------------v  Iterator interface methods  v-------------
+    //return true if iteration has more elements.
+    public boolean hasNext()
+    {
+      /* YOUR CODE HERE */
+      if (_dummy.getNext() == null) {
+        _okToRemove = false;
+        return false;
+      }
+      return true;
+    }
+
+
+    //return next element in this iteration
+    public T next()
+    {
+      /* YOUR CODE HERE */
+      _okToRemove = true;
+      T nextElement = _dummy.getNext().getCargo();
+      _dummy = _dummy.getNext();
+      return nextElement;
+    }
+
+
+    //return last element returned by this iterator (from last next() call)
+    //postcondition: maintains invariant that _dummy always points to a node
+    //               (...so that hasNext() will not crash)
+    public void remove()
+    {
+            /* YOUR CODE HERE */
+            if (_okToRemove) {
+              _dummy.getNext().setPrev(_dummy.getPrev());
+              _dummy.getPrev().setNext(_dummy.getNext());
+
+            }
+    }
+    //--------------^  Iterator interface methods  ^-------------
+    //-----------------------------------------------------------
+  }//*************** end inner class MyIterator ***************
+
+
+
   //main method for testing
   public static void main( String[] args )
   {
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     LList james = new LList();
 
     System.out.println("initially: " );
@@ -285,6 +349,7 @@ public class LList<T> implements List //your List.java must be in same dir
 
     System.out.println( "...after remove(0): " + james.remove(0) );
     System.out.println( james + "\tsize: " + james.size() );
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
 }//end class LList

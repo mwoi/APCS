@@ -1,0 +1,11 @@
+/***
+* Purple Pineapples: Jason Zhou, Russell Goychayev, Marcus Wu
+* APCS
+* HW86 – What A Racket
+* 03/31/2022
+* time spent: 0.8 hours
+**/
+
+// Disco: The subtraction part was hard, and you can unstack a stack (stack it in the other order which is pretty cool)
+
+// QCC:

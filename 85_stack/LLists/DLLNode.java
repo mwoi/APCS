@@ -2,6 +2,8 @@
  * class DLLNode
  * Implements a node, for use in lists and other container classes.
  *****************************************************/
+package LLists;
+
 
 public class DLLNode<T> {
 
@@ -10,7 +12,7 @@ public class DLLNode<T> {
 
 
     // constructor -- initializes instance vars
-    public DLLNode( T value, DLLNode<T> prev, DLLNode<T> next ) 
+    public DLLNode( T value, DLLNode<T> prev, DLLNode<T> next )
 {
 	_cargo = value;
 	_nextNode = next;
@@ -53,7 +55,7 @@ public class DLLNode<T> {
 
 
     //main method for testing
-    public static void main( String[] args ) 
+    public static void main( String[] args )
 {
 	//Below is an exercise in creating a linked list...
 
@@ -67,7 +69,7 @@ public class DLLNode<T> {
 	//Create a third node after the second
 	first.getNext().setNext( new DLLNode<String>( "cow", null ) );
 
-	DLLNode temp = first; 
+	DLLNode temp = first;
 	while( temp != null ) {
 	    System.out.println( temp );
 	    temp = temp.getNext();

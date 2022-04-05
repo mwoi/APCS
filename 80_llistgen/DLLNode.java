@@ -4,24 +4,24 @@
  * Stores its data as a String
  **/
 
-public class DLLNode
+public class DLLNode<T>
 {
   //instance vars
-  private String data;
+  private T data;
   private DLLNode nextNode;
-  private DLLNode previousNode;
+  private DLLNode prevNode;
 
   // constructor
-  public DLLNode( String value, DLLNode next, DLLNode previousNode )
+  public DLLNode( T value, DLLNode previous, DLLNode next )
   {
     this.data = value;
     this.nextNode = next;
-    this.previousNode = previousNode;
+    this.prevNode = previous;
   }
 
 
   //--------------v  ACCESSORS  v--------------
-  public String getCargo()
+  public T getCargo()
   {
     return data;
   }
@@ -33,13 +33,13 @@ public class DLLNode
 
   public DLLNode getPrev()
   {
-    return previousNode;
+    return prevNode;
   }
   //--------------^  ACCESSORS  ^--------------
 
 
   //--------------v  MUTATORS  v--------------
-  public String setCargo( String newCargo )
+  public T setCargo( T newCargo )
   {
     this.data = newCargo;
     return this.data;
@@ -53,8 +53,8 @@ public class DLLNode
 
   public DLLNode setPrev( DLLNode newPrevious )
   {
-    this.previousNode = newPrevious;
-    return this.previousNode;
+    this.prevNode = newPrevious;
+    return this.prevNode;
   }
   //--------------^  MUTATORS  ^--------------
 

@@ -1,0 +1,9 @@
+// Team Purple Pineapples: Jason Zhou, Russell Goychayev, Marcus Wu
+// APCS pd7
+// HW85: Leon Leonwood Stack
+// 2022-03-30
+// time spent: 0.5 hr
+
+// Disco: v cool. there was a bug but it was a minor bug that we fixed up
+
+// QCC:

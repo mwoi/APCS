@@ -4,36 +4,32 @@
  * Stores its data as a String
  **/
 
-public class DLLNode<T>
+package thing;
+
+
+public class LLNode<T>
 {
   //instance vars
-  private Object data;
-  private DLLNode nextNode;
-  private DLLNode previousNode;
+  private T data;
+  private LLNode<T> nextNode; 
 
   // constructor
-  public DLLNode( Object value, DLLNode next, DLLNode previousNode )
+  public LLNode( T value, LLNode<T> next )
   {
     this.data = value;
     this.nextNode = next;
-    this.previousNode = previousNode;
   }
 
 
   //--------------v  ACCESSORS  v--------------
   public T getCargo()
   {
-    return (T) data;
+    return data;
   }
 
-  public DLLNode getNext()
+  public LLNode<T> getNext()
   {
     return nextNode;
-  }
-
-  public DLLNode getPrev()
-  {
-    return previousNode;
   }
   //--------------^  ACCESSORS  ^--------------
 
@@ -42,19 +38,13 @@ public class DLLNode<T>
   public T setCargo( T newCargo )
   {
     this.data = newCargo;
-    return (T) this.data;
+    return this.data;
   }
 
-  public DLLNode setNext( DLLNode newNext )
+  public LLNode<T> setNext( LLNode<T> newNext )
   {
     this.nextNode = newNext;
     return this.nextNode;
-  }
-
-  public DLLNode setPrevious( DLLNode newPrevious )
-  {
-    this.previousNode = newPrevious;
-    return this.previousNode;
   }
   //--------------^  MUTATORS  ^--------------
 
@@ -67,19 +57,6 @@ public class DLLNode<T>
 
 
   //main method for testing
-  public static void main( String[] args )
-  {
-
-
-    //Q: when head ptr moves to next node in list, what happens to the node it just left?
-
-    //Its info is gone.
-
-    //...so better: ?
-    //
-    //
-    //
-
-  }//end main
 
 }//end class LLNode
+
