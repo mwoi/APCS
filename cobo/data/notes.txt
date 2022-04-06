@@ -1,8 +1,8 @@
-Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
+Team MnMs :: Max Schneider and Marcus Wu
 APCS
 LAB08 --
-2022-04-05
-time spent: <elapsed time in hours, rounded to nearest tenth>
+2022-04-06
+time spent: 22.5
 
 
 DISCO
@@ -11,9 +11,56 @@ DISCO
 QCC
 
 
-<TNPG>'s CSV FLOW:
+MnMs' CSV FLOW:
 <insert your description of your tools and workflow in creating, editing CSV files>
 
 
 TRUBZ
 <this lab involves using tools that are likely to introduce hiccups; log any troubleshooting issues here>
+-
+  $ javac -classpath .:path/to/sinbad.jar -d . Driver.java
+  $ java -classpath .:path/to/sinbad.jar Driver
+
+Questions
+==============================================================
+Activity 1: Data, Data, Data!
+==============================================================
+1. ESPN, Piazza, Google Classroom
+2. Telephone number, Name (Google Classroom)
+3. Delimited means separated. For data files, each data field is separated by columns, so
+    that there can be multiple types of data in one data file.
+4. By seeing what type of data is being stored (if they are all integers, you are probably
+    storing integer data).
+5. Health, sports
+6.
+7.
+8.
+9. Youtube can recommend videos that you may like based on watch history and user data
+    collected, which can help the user have an easier time finding content they want to view.
+10. It is collected from the keywords of videos you previously watched, or what other users who
+    watched those videos also watched afterwards.
+11. Yes. The data is not used maliciously or predatorily, so sites can suggest better
+    content suited for the user or their demographic.
+==============================================================
+Activity 2: Designing and Implementing a Custom Class
+==============================================================
+1. Cereal
+2. ?
+3. Public class Cereal
+4. 15
+5. String Name, String Type, int Calories, int Protein, int Fat, int Sodium, double Fiber,
+    double Carbohydrates, int Sugar, int Potassium, int Vitamins, int Shelf, double Weight, double Cups, double Rating
+8.
+9.
+10.
+==============================================================
+Activity 3: Putting It All Together
+==============================================================
+1. The temperature at Atlanta, Hartsfield - Jackson Atlanta International Airport, GA is 63.0F
+2. KNYC
+    The temperature at
+4.
+5.
+6.
+7.
+8.
