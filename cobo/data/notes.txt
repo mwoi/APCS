@@ -1,8 +1,8 @@
 Team MnMs :: Max Schneider and Marcus Wu
 APCS
-LAB08 --
+LAB08 -- America’s Next Top Data Scientist
 2022-04-06
-time spent: 22.5
+time spent: 1.5hr
 
 
 DISCO
@@ -17,9 +17,6 @@ MnMs' CSV FLOW:
 
 TRUBZ
 <this lab involves using tools that are likely to introduce hiccups; log any troubleshooting issues here>
--
-  $ javac -classpath .:path/to/sinbad.jar -d . Driver.java
-  $ java -classpath .:path/to/sinbad.jar Driver
 
 Questions
 ==============================================================
@@ -31,10 +28,10 @@ Activity 1: Data, Data, Data!
     that there can be multiple types of data in one data file.
 4. By seeing what type of data is being stored (if they are all integers, you are probably
     storing integer data).
-5. Health, sports
+5.
 6.
 7.
-8.
+8. A larger data set gives more information and gives a better average with less outliers.
 9. Youtube can recommend videos that you may like based on watch history and user data
     collected, which can help the user have an easier time finding content they want to view.
 10. It is collected from the keywords of videos you previously watched, or what other users who
@@ -50,17 +47,17 @@ Activity 2: Designing and Implementing a Custom Class
 4. 15
 5. String Name, String Type, int Calories, int Protein, int Fat, int Sodium, double Fiber,
     double Carbohydrates, int Sugar, int Potassium, int Vitamins, int Shelf, double Weight, double Cups, double Rating
-8.
-9.
-10.
+8. How much sugar does 100% Bran have?
+9. What cereal has the highest amount of sugar?
+10. We can compare the value of Sugar for all cereals using getSugar and see which has the highest.
 ==============================================================
 Activity 3: Putting It All Together
 ==============================================================
 1. The temperature at Atlanta, Hartsfield - Jackson Atlanta International Airport, GA is 63.0F
 2. KNYC
-    The temperature at
-4.
-5.
-6.
-7.
-8.
+    The temperature at New York City, Central Park, NY is 52.0F
+4. 2877 weather stations
+5. We could filter it based on latitude.
+6. Pago Pago, AS, Samoa, AS
+7. We can also get the humidity at the location.
+8. We could use fetch to get the int relative humidity, which is also listed in the website.
