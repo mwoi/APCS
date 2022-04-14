@@ -1,3 +1,11 @@
+/*
+Team Purple Pineapples: Jason Zhou, Marcus Wu, Russell Goychayev
+APCS
+HW90 - Swabbing the Deque
+04/12/2022
+time spent: 69 centuries
+*/
+
 import java.util.ArrayList;
 
 public class ALDequeueue<T> implements Deque<T> {
@@ -12,7 +20,7 @@ public class ALDequeueue<T> implements Deque<T> {
   }
 
   public void addLast(T e) {
-    _deque.add(_deque.size() - 1, e);
+    _deque.add(_deque.size(), e);
   }
 
   public T getFirst() {
@@ -39,12 +47,16 @@ public class ALDequeueue<T> implements Deque<T> {
     return _deque.size();
   }
 
+  public boolean contains(Object e) {
+    return _deque.contains(e);
+  }
+
+  public boolean remove(Object e) {
+    return _deque.remove(e);
+  }
+
   public String toString() {
     return _deque.toString();
   }
 
-  public static void main(String[] args) {
-    ALDequeueue<Integer> _dqasdfa = new ALDequeueue<Integer>();
-    _dqasdfa.addFirst(1);
-  }
 }

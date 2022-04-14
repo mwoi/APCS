@@ -4,6 +4,6 @@ HW90: Swabbing the Deque
 2022-4-12
 time spent: 0.2 hrs
 
-Disco: hmm double linked the way to go???
+Disco: wrapper classes are v useful because it's passing through to methods that alr exist
 
 QCC: why would u ever use this?
