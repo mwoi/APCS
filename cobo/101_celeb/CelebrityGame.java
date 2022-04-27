@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 /**
  * The framework for the Celebrity Game project
  * 
@@ -28,8 +31,12 @@ public class CelebrityGame
 	 */
 	public CelebrityGame()
 	{
+		
 		celebGameList = new ArrayList<Celebrity>();
 		gameWindow = new CelebrityFrame(this);
+		
+		prepareGame();
+		
 	}
 
 	/**
@@ -39,6 +46,7 @@ public class CelebrityGame
 	{
 		celebGameList = new ArrayList<Celebrity>();
 		gameWindow.replaceScreen("START");
+		
 	}
 
 	/**

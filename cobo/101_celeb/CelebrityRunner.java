@@ -2,9 +2,10 @@
  * Starts the Celebrity Game application
  * @author cody.henrichsen
  *
+
  */
-import java.util.Scanner;
-import java.util.Scanner.*;
+
+
 
 public class CelebrityRunner
 {
@@ -26,7 +27,6 @@ public class CelebrityRunner
 		// 	}
 		// 	System.out.println(game.sendAnswer() + "CORRECT");
 		// }
-		CelebrityFrame e = new CelebrityFrame(game);
-		
+	
 	}
 }
