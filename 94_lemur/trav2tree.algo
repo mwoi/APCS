@@ -1,0 +1,96 @@
+Teh Tree Stooges :: Jason Zhou, Marcus Wu, Russell Goychayev
+APCS pd7
+HW94 -- reverse engineering
+2022-05-06f
+time spent: 0.8 hrs
+
+
+DISCO
+------------------------------------------------
+* For this algo, we will most likely use recursive algos
+================================================
+
+
+QCC
+------------------------------------------------
+* anything we are missing(special cases)
+================================================
+
+
+HOW KEEN ARE YOUR POWERS OF OBSERVATION?
+------------------------------------------------
+Q: For a given binary tree, how many unique pre-order traversals are there?
+A: 1
+
+Q: For a given binary tree, how many unique in-order traversals are there?
+A: 1
+
+Q: For a given binary tree, how many unique post-order traversals are there?
+A: 1
+
+Q: For a given traversal, how many unique trees could have produced it?
+A: hmm?
+
+Q: Given a pre-order traversal, what can you infer about its tree?
+A: the first node is the root, and last is the rightmost node and the lowest level
+
+Q: Given a post-order traversal, what can you infer about its tree?
+A: last node is root, and the first node is the left most
+
+Q: What does "1-to-1" mean?
+A: 1 to 1 function so every input has one output
+
+Q: What does "onto" mean?
+A: every input has at least 1 output
+
+================================================
+
+
+ALGO for one pre and one post
+------------------------------------------------
+givens: 
+
+trees are binary 
+valid traversal
+
+procedure:
+so first letter of pre order is the root / last of post
+
+-if the second to last of post is second in pre then that node is under the root 
+ * remove the letter and redo this step 
+-other wise the second of pre is the left and the second to last of post is to the right 
+  - remove all letters after it in pre, and take the letter out of post. Take out root and redo preocedure on remaining letters
+  -
+================================================
+(replicate the algo section above as many times as necessary for distinct algos)
+
+
+ALGO for one pre and one in
+------------------------------------------------
+givens: 
+
+trees are binary 
+valid traversal
+
+procedure:
+so first letter of pre order is the root
+
+-find root in inorder
+-remove stuff after the root in in order. do the same for pre (remove those letters) and start again to get subtree
+-and do the same to the right
+================================================
+
+ALGO for one post and one in
+------------------------------------------------
+givens: 
+
+trees are binary 
+valid traversal
+
+procedure:
+so last letter of post order is the root
+
+-find root in inorder
+-remove stuff after the root in in order. do the same for pre (remove those letters) and start again to get subtree
+-and do the same to the right
+================================================
