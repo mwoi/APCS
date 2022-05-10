@@ -1,0 +1,13 @@
+Team Purple Pineapples: Jason Zhou, Marcus Wu, Russell Goychayev
+APCS pd7
+HW95 -- Algorithm as Data Structure
+2022-05-10
+time elapsed: 0.7 hrs
+
+Disoc: in the code, the order of the if statements to check left and right matter!!!!
+
+QCC:
+
+1. (2^h)
+2. 2^d ??
+3. 1 + log_2(n)
