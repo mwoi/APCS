@@ -1,0 +1,13 @@
+Team Purple Pineapples: Jason Zhou, Marcus Wu, Russell Goychayev
+APCS pd7
+HW96: BSTs is the Perfect Place for Shade
+2022-05-10
+time elapsed: 0.5 hrs
+
+Disoc: We thought it would be harder, but after sitting down w/ keys and ducky it was much much faster.
+       Talking w/ groupmates made it go faster.
+
+QCC:
+
+
+    What happens when it isn't a binary tree and you don't have 2 child per node??
