@@ -1,0 +1,7 @@
+Team Purple Pineapples: Jason Zhou, Marcus Wu, Russell Goychayev 
+APCS pd 7
+HW101: Heap o'Trouble
+2022-16-5
+Time spent: 0.2 hrs 
+
+QCC: where to choose to put a cake that can go in multiple places?

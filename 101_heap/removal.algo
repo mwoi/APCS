@@ -1,0 +1,8 @@
+Removing a leaf:
+Have parent node point to null
+
+Removing a node with one child:
+-Have parent point to child
+
+Remove a node with 2 children:
+-choose the node with the lowest value and recursively call remove on the ones below that child

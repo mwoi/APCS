@@ -1,0 +1,5 @@
+Algo:
+
+Adding at a leaf: Traverse tree until and add as a leaf
+
+Value is to be added before a node: have parent node point to added node
